@@ -1,4 +1,4 @@
-package internal
+package history
 
 import (
 	"os"
@@ -12,7 +12,7 @@ type GameRecord struct {
     Attempts int   
 }
 
-func saveToCSV(records []GameRecord, filename string) error {
+func SaveToCSV(records []GameRecord, filename string) error {
     file, err := os.Create(filename)
     if err != nil {
         return fmt.Errorf("не удалось создать файл: %v", err)
